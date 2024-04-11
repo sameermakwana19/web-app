@@ -7,8 +7,7 @@
     margin-top: $margin-48;
     margin-bottom: $margin-48;
     padding: $padding-72 $padding-0;
-    display: flex;
-    flex-direction: column;
+    @include flex-container($direction: column);
     gap: $gap-40;
 
     @include laptop {
@@ -24,9 +23,7 @@
       }
 
       .content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex-container($direction: column);
         gap: $gap-24;
       }
 

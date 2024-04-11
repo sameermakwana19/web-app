@@ -5,7 +5,7 @@
   border-radius: $border-radius-12;
   padding: $padding-12 $padding-16;
   width: 100%;
-  display: flex;
+  @include flex-container;
   gap: $gap-8;
 
   &:focus-within {

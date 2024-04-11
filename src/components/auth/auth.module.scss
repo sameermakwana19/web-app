@@ -5,8 +5,8 @@
 
   padding: $padding-72 $padding-0;
   gap: $gap-24;
-  display: grid;
-  align-items: center;
+
+  @include flex-container($align: center);
 
   @include tablet {
     grid-template-columns: 1fr 1fr;
@@ -17,8 +17,7 @@
     gap: $gap-48;
 
     .header {
-      display: flex;
-      flex-direction: column;
+      @include flex-container($direction: column);
       gap: $gap-24;
 
       .logo {
@@ -37,10 +36,8 @@
 
       .form-action {
         padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
+
+        @include flex-container($justify: space-between, $wrap: wrap);
         gap: $gap-8;
       }
     }

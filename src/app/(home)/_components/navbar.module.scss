@@ -12,17 +12,16 @@
   @include container;
 
   height: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+  @include flex-container($justify: space-between);
   gap: $gap-24;
   margin: auto;
 
   .logo {
     font-size: $font-size-24;
     font-weight: $font-weight-700;
-    display: flex;
-    align-items: center;
+
+    @include flex-container;
     gap: $gap-8;
     z-index: 999;
   }
@@ -37,10 +36,8 @@
 
   .menubar {
     .menu {
-      display: flex;
+      @include flex-container;
       gap: $gap-24;
-      align-items: center;
-      justify-content: center;
 
       &__item {
         font-size: $font-size-16;
@@ -63,12 +60,10 @@
       position: fixed;
       top: 0;
       left: 0;
-      flex-direction: column;
+      @include flex-container($direction: column);
       height: 100%;
       width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+
       gap: $gap-24;
       background-color: $color-white;
 
@@ -87,9 +82,8 @@
     .menu-tablet {
       height: 100%;
       width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+
+      @include flex-container($justify: space-between);
       gap: $gap-24;
       background-color: $color-transparent;
 

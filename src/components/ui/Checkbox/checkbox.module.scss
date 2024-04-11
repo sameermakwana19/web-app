@@ -1,9 +1,8 @@
 @use '../../../styles' as *;
 
 .checkbox-container {
-  display: flex;
+  @include flex-container($align: center);
   gap: $gap-8;
-  align-items: center;
 
   .label {
     color: $color-text-primary;
@@ -28,9 +27,8 @@
 
     &:checked {
       background-color: $color-primary;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
+      @include flex-container;
       border: 1px solid $color-primary;
 
       &::before {

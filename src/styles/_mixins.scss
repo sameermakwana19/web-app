@@ -1,6 +1,6 @@
 @use './constants' as *;
 
-@mixin flex-container($direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap) {
+@mixin flex-container($direction: row, $justify: center, $align: center, $wrap: nowrap) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
